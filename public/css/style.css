@@ -1,0 +1,738 @@
+:root {
+    --primary-color: #8B0000;
+    --secundary-color: #161515;
+    --tertiary-color: #F2F4F3;
+    --quaternary-color: #7a0202;
+    --quinary-color: #3e3d3d;
+    --senary-color:#b70505;
+    --septenary-color: #fff;
+}
+
+/*Tudo*/
+
+* {
+    font-family: 'Noto Sans JP';
+    padding: 0;
+    margin: 0;
+    box-sizing:border-box;
+}
+
+body {
+    min-height: 100vh;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+main {
+    min-height: 100%;
+    overflow-x: hidden;
+}
+
+header {
+    background-color: var(--primary-color);
+    padding: 6px 0;
+}
+
+/*NAVBAR*/
+
+.center {
+    max-width: 100%;
+    padding: 0 2%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.logo {
+    width: auto;
+    color: white;
+}
+
+.menu-desktop {
+    width: auto;
+    height: 43px;
+}
+
+.menu-desktop ul a {
+    color: var(--tertiary-color);
+    transition: all 250ms linear 0s;
+}
+
+.menu-desktop a:hover {
+    color: white;
+    text-shadow: 0 0 10px white;
+    background-color: var(--quaternary-color);
+}
+
+.menu-desktop.active a {
+    color: white;
+    text-shadow: 0 0 10px white;
+}
+
+.menu-desktop ul li {
+    display: inline-block;
+    margin: 8px 10px;
+}
+
+.menu-desktop ul li a {
+    padding: 17px 14px;
+    color: white;
+    text-decoration: none;
+}
+
+.menu-mobile {
+    display: none;
+    text-align: right;
+    width: auto;
+}
+
+.menu-mobile i {
+    cursor: pointer;
+    color: white;
+    font-size: 35px;
+}
+
+.menu-mobile ul {
+    background-color: var(--primary-color);
+    opacity: 0;
+    transition: 1s;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 52px;
+    text-align: center;
+    list-style: none;
+}
+
+.show-menu {
+    opacity: 1 !important;
+    z-index:1000;
+}
+
+.menu-mobile ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+    padding: 8px 0;
+    display: block;
+    transition: all 250ms linear 0s;
+}
+
+.menu-mobile a:hover {
+    color: white;
+    text-shadow: 0 0 10px white;
+    background-color: var(--quaternary-color);
+}
+
+.menu-mobile.active a {
+    color: white;
+    text-shadow: 0 0 10px white;
+}
+
+.menu-mobile ul li {
+    margin: -15px -33px;
+}
+
+.menu-mobile ul li a {
+    padding: 17px 14px;
+    color: white;
+    text-decoration: none;
+}
+
+#dropdown-menu {
+    background-color: var(--primary-color);
+    top:40px;
+}
+
+@media screen and (max-width:1337px) {
+    .menu-mobile {
+        display: block;
+    }
+
+    /*.menu-mobile ul{display: none;}*/
+
+    .menu-desktop {
+        display: none;
+    }
+}
+
+main {
+    background-color: var(--secundary-color);
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+/*Barra lateral direita*/
+
+.sidebar {
+    right:0;
+    position: relative;
+    width: 275px;
+    min-height: 100%;
+    padding: 17px;
+    text-align: center;
+    background-color: var(--tertiary-color);
+}
+
+.sidebar h2{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.sidebar-MAL {
+    margin-bottom: 10px;
+}
+
+.sidebar-MAL a{
+    text-decoration: none;
+} 
+
+.sidebar-MAL img {
+    width: 50px;
+    height: 50px;
+    border: outset;
+    object-fit: cover;
+}
+
+.sidebar form {
+    margin-top: 12px;
+}
+
+.sidebar input {
+    width: 140px;
+}
+
+.pix img {
+    width: 100%;
+    height: auto;
+    border: 0;
+    object-fit: cover;
+}
+
+button{
+
+    margin-top:5px;
+
+}
+
+.container {
+    position: relative;
+    flex-direction: column;
+    min-height: 84.5vh;
+}
+
+/*Home Section*/
+.home-section {
+    width: 93%;
+    height: 400px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+#carouselExampleIndicators {
+    width: 50%;
+    height: 100%;
+    border-radius: 10px 0 0 10px;
+}
+
+#carouselExampleIndicators img{
+    object-fit: cover;
+    width:300px;
+    height:400px;
+    border-radius: 10px 10px 10px 10px;
+}
+
+.square-div {
+    width: 50%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    position: relative;
+}
+
+.lugarum {
+    grid-row: 1 / span 1;
+    grid-column: 1 / span 1;
+}
+
+.lugardois {
+    grid-row: 1 / span 1;
+    grid-column: 2 / span 1;
+}
+
+.lugartres {
+    grid-row: 2 / span 1;
+    grid-column: 1 / span 1;
+}
+
+.lugarquatro {
+    grid-row: 2 / span 1;
+    grid-column: 2 / span 1;
+}
+
+.square {
+    display: inline-block;
+    margin: 10px;
+    box-shadow: 0px 0px 10px 0px white;
+    display: flex;
+}
+.square a{
+
+    text-decoration: none;
+
+}
+.square p{
+    color: white;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.square img{
+    position:absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/*News Section*/
+.news-section {
+    position: relative;
+    background-color: white;
+    text-align: center;
+    border-radius: 10px 10px 10px 10px;
+    width: 93%;
+    margin: 15px 0 15px 0;
+    align-content: center;
+}
+
+.news-section a{
+
+    text-decoration: none;
+
+}
+
+.news-section h2, .news-section h1 {
+    text-align: start;
+    background-color: white;
+    padding: 5px 0px 0px 12px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    height: 42px;
+    box-shadow: 0 -4px 7px #ececf1ab;
+    width: 100%;
+    font-family: 'Bebas Neue';
+    color: red;
+}
+
+.news-section h4{
+
+    font-size:22px;
+    text-align:start;
+
+}
+
+.news-section p{
+
+    text-align:start;
+}
+
+.news-section h5{
+
+    text-align: start;
+    color: var(--senary-color);
+
+}
+
+.news-section h6{
+
+    color:#5c6670;
+
+}
+
+.news-section h5:hover{
+
+    color: var(--quinary-color);
+
+}
+
+#section-row {
+    margin:0;
+}
+
+.card {
+    margin-left: 10px;
+    margin-bottom: 10px;
+    display:block;
+}
+
+.card-title {
+    color: var(--quinary-color);
+}
+
+#card-tamanho:hover h4 {
+    color: var(--senary-color);
+}
+
+#card-tamanho img {
+    transition: filter .3s ease;
+    transition-delay: 0.1s;
+}
+
+#card-tamanho:hover img {
+    filter: opacity(70%);
+}
+
+.card-img-top {
+    object-fit: cover;
+    height: 155px;
+    width:300px;
+}
+
+.inline {
+    display: inline-block;
+    text-align:start;
+}
+
+/*Calendario*/
+.table {
+    position: relative;
+    overflow-x: auto;
+}
+
+.calendar-table {
+    color: white;
+    width: 100%;
+    table-layout: fixed;
+}
+
+.calendar-table p {
+    max-width: 10ch;
+    text-align: center;
+}
+
+.calendar-table a {
+    color: white;
+    text-decoration: none;
+}
+
+.calendar-table a:hover {
+    color: darkred;
+}
+
+.calendar-table img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
+}
+
+.calendar-table td {
+    border-left: 1px solid #000;
+    padding: 10px;
+    vertical-align: top;
+    width: 14.28%; /* definir a largura das células como 1/7 da largura da tabela */
+}
+
+.calendar-table td:first-child {
+    border-left: none;
+}
+
+.calendar-cedula {
+    display: flex;
+    flex-direction: column;
+    justify-content: top;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    /* alterar a largura das células para 100% em telas menores que 768px */
+    .calendar-table td {
+        width: 100%;
+    }
+
+    .calendar-table {
+        flex-direction: column; /* Alteramos a direção para empilhar verticalmente */
+    }
+}
+
+/*Noticia Container*/
+
+.noticia-container {
+    background-color: #fff;
+    padding: 20px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    margin-bottom: 21px;
+}
+
+.noticia-container p {
+    font-size: 20px;
+}
+
+.noticia-container img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    object-fit: cover;
+}
+
+.arialabel nav{
+
+    position:relative;
+    align-content:center;
+    align-items:center;
+    align-self:center;
+
+}
+
+/*Create container*/
+.create-container {
+    background-color: white;
+    margin-bottom: 21px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+.create-container form{
+
+    margin-bottom:20px;
+
+}
+
+.create-container input{
+
+    margin-top: 10px;
+
+}
+
+.create-container button{
+
+    margin-top: 10px;
+    margin-bottom:12px;
+
+}
+
+
+/*Info anime*/
+.info-anime {
+    background-color: white;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+}
+
+.info-anime h1{
+    text-align: center;
+    top:0;
+    margin-left:1px;
+    margin-bottom:10px;
+}
+
+.info-anime img{
+
+    width:260px;
+    height:auto;
+    object-fit: cover;
+    margin-top:10px;
+    margin-bottom:10px;
+
+}
+
+.info-anime p{
+    text-align: start;
+    padding-left:60px;
+    padding-right:60px;
+}
+
+.info-anime div{
+
+    text-align: center;
+    justify-content:right;
+
+}
+
+.info-anime a{
+    margin-bottom: 10px;
+    text-decoration: none;
+    color:var(--primary-color);
+    
+}
+
+.info-anime a:hover{
+
+    color: var(--senary-color);
+
+}
+
+.info-review {
+    background-color: #5a4c4c;
+}
+
+.pagination {
+    display: flex;
+    padding: 0;
+    list-style: none;
+    justify-content: center;
+}
+
+/*Roda-pé*/
+footer {
+    background-color: darkred;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    height: 91px;
+    color: white;
+    bottom: 0;
+}
+
+.nomeautor {
+    margin-top: 0.5%;
+    margin-right: 70%;
+}
+
+.user-post img {
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    object-fit: cover;
+    box-shadow: 0 0px 0px rgba(0, 0, 0, 0.5);
+    border: 1px solid black;
+}
+
+.user-post {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.corpo-post {
+    position: relative;
+    margin-bottom: 50px;
+    font-size: 1.2em;
+    width:100%;
+}
+
+.corpo-post img{
+    width:100%;
+
+}
+
+.tags-post {
+    position: relative;
+    margin-top: 5px;
+}
+
+.tags-post h5{
+    font-size: 1em;
+    color:black;
+}
+
+.tags-post a{
+    list-style: none;
+    text-decoration: none;
+    color:var( --primary-color);
+}
+
+.tags-post a:hover{
+
+    color:var(--quinary-color);
+
+}
+
+.noticia-container h4 {
+    font-size: 1em;
+}
+
+.calendario{
+
+    position:relative;
+    align-content:center;
+    align-items:center;
+    align-self:center;
+
+}
+
+.botao {
+
+    width:200px;
+    background-color:var(--secundary-color);
+    position:relative;
+    display: inline-block;
+    margin-right: 10px; /* Espaçamento entre as divs */ 
+    border: solid;
+    border-block-color: red;
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 30px;
+    list-style: none;
+    text-decoration: none;
+}
+
+@media (max-width:1543px) {
+    
+    .home-section {
+        flex-direction:column;
+        height:768px;
+        width:100%;
+    }
+
+    #carouselExampleIndicators{
+
+        width:100%;
+    }
+
+    .square-div {
+        width: 100%;
+        height: 50%;
+        grid-template-rows: repeat(1, 1fr);
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .lugarum {
+        grid-row: 1 / span 1;
+        grid-column: 1 / span 1;
+    }
+
+    .lugardois {
+        grid-row: 1 / span 1;
+        grid-column: 2 / span 1;
+    }
+
+    .lugartres {
+        grid-row: 1 / span 1;
+        grid-column: 3 / span 1;
+    }
+
+    .lugarquatro {
+        grid-row: 1 / span 1;
+        grid-column: 4 / span 1;
+    }
+
+}
+
+@media screen and (max-width:1053px){
+
+    .nomeautor {
+        margin-right: 0;
+    }
+
+}
+

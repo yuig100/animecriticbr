@@ -1,0 +1,82 @@
+:root {
+    --primary-color: #161515;
+    --secundary-color: #f7f7f7;
+    --tertiary-color: #141414;
+    --quaternary-color:;
+    --quinary-color:;
+    --senary-color:;
+    --septenary-color:;
+}
+
+
+/**/
+
+* {
+    font-family: 'Noto Sans JP';
+    color: black;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    background-color: var(--primary-color);
+}
+
+body {
+    overflow: hidden;
+}
+
+main {
+    background-color: var(--primary-color);
+}
+
+.container {
+    position: relative;
+    width: 100vh;
+    height: 100vh;
+}
+
+.registro {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    background-color: var(--secundary-color);
+    width: 395px;
+    height: 500px;
+    border-radius: 10px;
+}
+
+.registro input{
+
+    border-radius:5px;
+    border-color:black;
+
+}
+
+.registro h1 {
+    margin-top: 0;
+    color:var(--tertiary-color);
+}
+
+.registro button{
+
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    align-self:center;
+    margin-top: 10px;
+    margin-left: 120px;
+    display: flex;
+}
+
+
+.registro form {
+    width: 100%;
+    padding:30px;
+}

@@ -1,0 +1,161 @@
+:root {
+    --primary-color: #8B0000;
+    --secundary-color: #161515;
+
+
+    --tertiary-color: #F2F4F3;
+    --quaternary-color: #7a0202;
+    --quinary-color: #3e3d3d;
+    --senary-color: #b70505;
+    --septenary-color: #fff;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+main {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+
+.navbar-user {
+    background-color: #bfbfbf;
+    left: 0;
+    width: 300px;
+    min-height: 100vh;
+    position: relative;
+    padding: 5px;
+}
+
+.user-name {
+    width: 100%;
+    position: relative;
+    text-align: center;
+    color:black;
+}
+
+.user-image {
+    position: relative;
+    margin-top: 20px;
+    width: auto;
+    height:auto;
+    text-align:center;
+}
+
+.user-image img {
+    width: 200px;
+    height: 200px;
+    margin:5px;
+    align-self:center;
+    object-fit: cover;
+    border-radius: 50%;
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.5);
+}
+
+.user-image p{
+
+    margin-top:5px;
+
+}
+
+.user-info {
+    position: relative;
+    width: auto;
+    margin-left:5px;
+    margin-top:5px;
+}
+
+.user-central {
+    flex-direction: column;
+    height:100%;
+}
+
+.user-bio {
+    background-color: var(--tertiary-color);
+    width: 95%;
+    height: auto;
+    min-height:100px;
+    top: 0;
+    padding: 10px;
+    margin: 10px 2.5% 0;
+    border-radius: 10px 10px 10px 10px;
+    position: relative;
+    align-self: center;
+
+    border: 2px solid darkred;
+}
+
+.user-cometarios{
+
+    margin: 20px 0 0 0 ;
+}
+
+.user-comentario {
+    width: 95%;
+    min-height: 125px;
+    margin: 5px 2.5% 0;
+    padding: 5px;
+    border-radius: 20px 20px 20px 20px;
+    background-color: var(--tertiary-color);
+    border: 2px solid var(--tertiary-color);
+}
+
+.admin-functions{
+
+    display:grid;
+    
+}
+
+.admin-functions button{
+    margin: 5px 5px 0;
+    width:95%;
+    height:50px;
+}
+
+.user-seguidores{
+
+    display:flex;
+
+}
+
+.container{
+
+    position:relative;
+    height:100%;
+
+}
+
+.edit-perfil {
+    background-color: white;
+    width: 100%;
+    height: 800px;
+    padding: 10px;
+    border-radius: 0 0 10px 10px;
+}
+
+.image-user{
+
+    position:relative;
+
+}
+
+.image-user img{
+    object-fit: cover;
+    border:solid;
+    border-color:var(--primary-color);
+    width:150px;
+    height:150px;
+
+}
+
